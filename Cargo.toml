@@ -10,4 +10,7 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 embedded-hal = "0.2"
-ht16k33 = { git = "https://github.com/gferon/ht16k33.git", branch = "no-std", features = [] }
+ht16k33 = "0.4"
+
+[dev-dependencies]
+rppal = { version = "0.11", features = ["hal"] }
