@@ -75,11 +75,10 @@ where
     fn update_bicolor_led(&mut self, x: u8, y: u8, color: Color) -> Result<(), E> {
         let (on1, on2) = color.into();
         // red LED
-        let coord = y * 16 + x;
+        let coord = x * 16 + y;
         self.update_display_buffer(LedLocation::new(coord / 8, coord % 8).unwrap(), on1);
         // green LED
-        let coord = y * 16 + x + 8;
+        let coord = x * 16 + y + 8;
         self.update_display_buffer(LedLocation::new(coord / 8, coord % 8).unwrap(), on2);
-        self.write_display_buffer()
     }
 }
