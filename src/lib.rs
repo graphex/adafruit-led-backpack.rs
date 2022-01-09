@@ -72,7 +72,7 @@ where
     ///
     /// # }
     /// ```
-    fn update_bicolor_led(&mut self, x: u8, y: u8, color: Color) -> Result<(), E> {
+    fn update_bicolor_led(&mut self, x: u8, y: u8, color: Color) {
         let (on1, on2) = color.into();
         // red LED
         let coord = x * 16 + y;
