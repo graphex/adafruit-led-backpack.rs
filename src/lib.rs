@@ -13,7 +13,7 @@ use ht16k33::{LedLocation, HT16K33};
 /// Operate a Bicolor 8x8 Matrix LED backpack
 pub trait BicolorMatrix8x8<E> {
     /// Updates a single LED in the 8x8 grid, where (0,0) is at the bottom-left corner
-    fn update_bicolor_led(&mut self, x: u8, y: u8, color: Color) -> Result<(), E>;
+    fn update_bicolor_led(&mut self, x: u8, y: u8, color: Color);
 }
 
 /// LEDs can be 3 possible colors (and off)
